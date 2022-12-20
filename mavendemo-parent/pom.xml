@@ -4,7 +4,7 @@
 	<groupId>com.learnmaven</groupId>
 	<artifactId>mavendemo-parent</artifactId>
 	<version>1.0</version>
-	<packaging>pom</packaging>
+	<packaging>pom</packaging> <!-- some comment-->
 
 	<name>Maven Demo Parent</name>
 	<description>Multi Module Project Consisting of a simple java project and a webapp</description>
