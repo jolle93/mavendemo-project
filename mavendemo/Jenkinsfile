@@ -19,17 +19,17 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn -f mavendemo/pom.xml test'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'mvn clean package -DskipTests'
+                sh 'mvn -f mavendemo/pom.xml clean package -DskipTests'
             }
             post {
                 success {
-                    junit 'target/surefire-reports/**/*.xml'
+                    junit 'mavendemo/target/surefire-reports/**/*.xml'
                 }
             }
         }
