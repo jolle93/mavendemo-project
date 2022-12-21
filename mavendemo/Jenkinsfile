@@ -1,0 +1,17 @@
+pipeline {
+   agent any
+   stages {
+	stage('Test') {
+        	steps {
+		 mvn test
+		}
+	}
+	stage('Build') {
+		steps {
+			echo 'Building...'
+			mvn clean package -DskipTests
+		}
+	}	
+   }
+
+}
